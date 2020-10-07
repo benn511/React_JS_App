@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./assets/style.css";
 import quizService from "./quizService";
 import QuestionBox from "./components/QuestionBox";
+import QuestionBoxAnswers from "./components/QuestionBoxAnswers";
 import Result from "./components/Result";
 
 class QuizBee extends Component {
@@ -32,6 +33,7 @@ class QuizBee extends Component {
     });
   };
 
+  //
   playAgain = () => {
     this.getQuestions();
     this.setState({
@@ -64,10 +66,30 @@ class QuizBee extends Component {
             )
           )}
 
-        {/* Different render state */}
+        {/* Different render state for Result*/}
         {this.state.responses === 5 ? (
-          <Result score={this.state.score} playAgain={this.playAgain} />
+          <Result
+            questions={this.state.questionBank}
+            score={this.state.score}
+            playAgain={this.playAgain}
+          />
         ) : null}
+
+        {/* Render correct answer choices after reaching max */}
+        {this.state.questionBank.length > 0 &&
+          this.state.responses === 5 &&
+          this.state.questionBank.map(
+            ({ question, correct, questionId, tips }) => (
+              <QuestionBoxAnswers
+                question={question}
+                correct={correct}
+                key={questionId}
+                tip={tips}
+              />
+            )
+          )}
+
+        {/* End of container */}
       </div>
     );
   }
