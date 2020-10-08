@@ -24,7 +24,7 @@ const qBank = [
   {
     question: "Which of the following compares types?",
     answers: ["=", "==", "==="],
-    correct: "==",
+    correct: "===",
     questionId: "4",
     tips:
       "= is a declaration. == compares values. === compares values AND type. ",
