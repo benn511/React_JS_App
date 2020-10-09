@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-const QuestionBox = ({question, options, selected}) => {
+const QuestionBox = ({ question, options, selected, updateClick }) => {
   const [answer, setAnswer] = useState(options);
+  // const [isDisabled, setButton] = useState(false);
   return (
     <div className="questionBox">
       <div className="question">{question}</div>
@@ -10,9 +11,12 @@ const QuestionBox = ({question, options, selected}) => {
           key={index}
           className="answerBtn"
           onClick={() => {
+            //Disable button
+            // setButton(true);
             setAnswer([text]);
             selected(text);
           }}
+          disabled={isDisabled}
         >
           {text}
         </button>

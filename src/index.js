@@ -33,7 +33,7 @@ class QuizBee extends Component {
     });
   };
 
-  //
+  // Controls state of questionBank, score and responses on a reset
   playAgain = () => {
     this.getQuestions();
     this.setState({
