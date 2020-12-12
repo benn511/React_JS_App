@@ -80,7 +80,7 @@ const qBank = [
       "An inner function being able to access variables outside the function it was declared in is an example of ?",
     answers: ["inheritance", "closure"],
     correct: "closure",
-    questionId: "Closure ",
+    questionId: "11 ",
     tips:
       "A closure is the combination of a function and the lexical environment within which that function was declared.",
   },
@@ -89,17 +89,50 @@ const qBank = [
       "The `this` keyword behaves the same in strict mode and non-strict mode.",
     answers: ["true", "false"],
     correct: "false",
-    questionId:
+    tips:
       "In most cases, the value of this is determined by how a function is called (runtime binding). It can't be set by assignment during execution, and it may be different each time the function is called.",
   },
+  {
+    question: "Given: let num = 5; num += ''; What will occur?",
+    answers: [
+      "Program will break",
+      "Num is cast to a string",
+      "Nothing happens",
+    ],
+    correct: "Num is cast to a string",
+    tips:
+      "Adding an empty string is a fast and easy way to cast a number to a string!",
+    questionId: "13",
+  },
+  {
+    question: "What does the expression NaN + 5 evaluate to?",
+    answers: ["5", "NaN", "undefined"],
+    correct: "NaN",
+    questionId: "14",
+    tips:
+      "NaN is toxic and will always evaluate to NaN. To check if a value is NaN you can use isNaN(val)",
+  },
+  {
+    question: "Which of the following evaluate to false?",
+    answers: [
+      "false, 0, ''",
+      "false, 0, '', NaN",
+      "false, 0, '', NaN, null",
+      "false, 0, '', NaN, null, undefined",
+    ],
+    correct: "false, 0, empty string, nan, null and undefined",
+    questionId: "15",
+    tips:
+      "false, 0, empty string, nan, null and undefined all evaluate to false. ANY other values besides these evaluate to true!",
+  },
+  // {
+  //   question: "What does NaN mean?",
+  //   answers: ["", ""],
+  //   correct: "",
+  //   questionId: "",
+  //   tips: "",
+  // },
 ];
-
-// {
-//   question: "",
-//   answers: ["", ""],
-//   correct: "",
-//   questionId: "",
-// },
 
 export default (n = 5) =>
   Promise.resolve(qBank.sort(() => 0.5 - Math.random()).slice(0, n));
