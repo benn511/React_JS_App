@@ -16,8 +16,8 @@ class QuizBee extends Component {
 
   //Invoke api to get our questions(Update State var)
   getQuestions = () => {
-    quizService().then((question) => {
-      this.setState({ questionBank: question });
+    quizService().then((questions) => {
+      this.setState({ questionBank: questions });
     });
   };
 
@@ -42,7 +42,6 @@ class QuizBee extends Component {
     });
   };
 
-  //Function of life cycle...Call this to invoke beginning of life
   componentDidMount() {
     this.getQuestions();
   }
