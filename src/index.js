@@ -49,7 +49,7 @@ class QuizBee extends Component {
   render() {
     return (
       <div className="container">
-        <div className="title">Javascript Quiz</div>
+        <div className="title">Javascript/React Quiz</div>
         {/* Renders questions when available..
         there has to be at least one question to render and less than 5 responses to our questions */}
         {this.state.questionBank.length > 0 &&
