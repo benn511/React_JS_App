@@ -126,7 +126,7 @@ const qBank = [
       "false, 0, empty string, nan, null and undefined all evaluate to false. ANY other values besides these evaluate to true!",
   },
   // {
-  //   question: "What does NaN mean?",
+  //   question: "",
   //   answers: ["", ""],
   //   correct: "",
   //   questionId: "",

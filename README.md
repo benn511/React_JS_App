@@ -1,6 +1,10 @@
 # Javascript Quiz App
 
-App contains a series of questions on syntax, behavior, and other applications.
+App uses mock api to retrieve some Javascript quiz questions.
+
+## App preview
+
+![App preview](app_preview.gif)
 
 ## Running App
 
@@ -11,7 +15,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
